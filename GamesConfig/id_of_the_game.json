@@ -1,0 +1,7 @@
+{
+  "name": "Name of the Game",
+  "process": "process_game.exe",
+  "path": "C:\\Games\\Folder of the Game\\process_game.exe",
+  "arguments": "arguments/parameters",
+  "trainer": "path_of_the_trainer"
+}
