@@ -2,7 +2,7 @@
 [![Github All Releases](https://img.shields.io/github/downloads/estevamdev/trainer_launcher_4deck/total.svg)]()
 [![Discord](https://img.shields.io/discord/1318649855115005982?label=discord)](https://discord.gg/Mag4Sm4JVQ)
 [![GitHub commit activity (branch)](https://img.shields.io/github/commit-activity/t/estevamdev/trainer_launcher_4deck/main)]()
-[![GitHub Release Date](https://img.shields.io/github/release-date/estevamdev/trainer_launcher_4deck)]()
+[![GitHub Release Date](https://img.shields.io/github/release-date/estevamdev/trainer_launcher_4deck)](https://github.com/estevamdev/trainer_launcher_4deck/releases/latest)
 
 
 ## About
