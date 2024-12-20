@@ -6,6 +6,7 @@ from os.path import isfile, join
 from jsonlib import *
 from system_process import *
 import argparse
+import pathlib
 
 
 class main():
@@ -14,7 +15,7 @@ class main():
         #Clear the screen
         os.system('cls')
 
-        GamesConfig_Path = ".\GamesConfig"
+        GamesConfig_Path = pathlib.Path(sys.path[0], "GamesConfig")
 
         #If the path{GamesConfig_Path} does not exist, create it!
         if not (os.path.isdir(GamesConfig_Path)):
@@ -30,6 +31,9 @@ class main():
         args = parser.parse_args()
         game = {}
 
+        if (args.game_id is not None): 
+            file_game_cfg = pathlib.Path(GamesConfig_Path, args.game_id.replace('"', '').strip()+'.json')
+
         if (args.game_path is None):
             #Checks if the argument/parameter was received
             if (args.game_id is None): 
@@ -37,21 +41,18 @@ class main():
                 os.system("pause")
                 sys.exit()
             
-            if (not isfile(f'{GamesConfig_Path}\{args.game_id.strip()}.json')):
+            if (not isfile(file_game_cfg)):
                 print ("[ERROR] - Game config not found!")
                 os.system("pause")
                 sys.exit()
 
-            game = jsonlib.get_json(f'{GamesConfig_Path}\{args.game_id.strip()}.json')
+            game = jsonlib.get_json(file_game_cfg)
         else:
              game["path"] = args.game_path.strip()
              game["arguments"] = args.game_args.strip() if (args.game_args is not None) else ""
              game["trainer"] = args.trainer_path.strip() if (args.trainer_path is not None) else ""
              game["name"] = args.game_name.strip() if (args.game_name is not None) else ""
         
-        
-        #game_path = args.game_path if (args.game_path is not None) else game["path"]
-
         #Execute
         system_process(game["path"], game["name"], game["arguments"], game["trainer"])
 
