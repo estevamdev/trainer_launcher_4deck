@@ -1,4 +1,6 @@
 # trainer_launcher_4deck
+[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/L3L11C0ET0)
+
 [![Github All Releases](https://img.shields.io/github/downloads/estevamdev/trainer_launcher_4deck/total.svg)]()
 [![Discord](https://img.shields.io/discord/1318649855115005982?label=discord)](https://discord.gg/Mag4Sm4JVQ)
 [![GitHub commit activity (branch)](https://img.shields.io/github/commit-activity/t/estevamdev/trainer_launcher_4deck/main)]()
